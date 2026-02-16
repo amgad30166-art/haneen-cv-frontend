@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حنين الشرق للإستقدام - إنشاء السيرة الذاتية</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="assets/logo.png" alt="Haneen Al Sharq" class="header-logo" />
+        <div>
+          <h1 class="header-title">حنين الشرق للإستقدام</h1>
+          <p class="header-subtitle">Haneen Al Sharq Recruitment</p>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span class="badge-icon">📄</span>
+        <span>إنشاء السيرة الذاتية</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ PROGRESS BAR ═══ -->
+  <div class="progress-wrap">
+    <div class="progress-inner">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="steps" id="stepsNav"></div>
+    </div>
+  </div>
+
+  <!-- ═══ FORM ═══ -->
+  <main class="main">
+    <form id="cvForm" novalidate>
+
+      <!-- STEP 1: Personal Info -->
+      <section class="form-step active" data-step="1">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div>
+            <h2 class="step-title">المعلومات الشخصية</h2>
+            <p class="step-subtitle">Personal Information</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field full">
+            <label>الاسم الكامل (بالإنجليزية) <span class="en">Full Name</span></label>
+            <input type="text" name="fullName" placeholder="e.g. Grace Nakamya" required dir="ltr" />
+          </div>
+          <div class="field full">
+            <label>الاسم الكامل (بالعربية) <span class="en">Full Name in Arabic</span></label>
+            <input type="text" name="fullNameAr" placeholder="مثال: غريس ناكاميا" />
+          </div>
+          <div class="field">
+            <label>الجنس <span class="en">Gender</span></label>
+            <select name="gender" required>
+              <option value="">اختر...</option>
+              <option value="Female">أنثى / Female</option>
+              <option value="Male">ذكر / Male</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>تاريخ الميلاد <span class="en">Date of Birth</span></label>
+            <input type="date" name="dateOfBirth" required />
+            <span class="field-hint">العمر بين 21 و 45 سنة</span>
+          </div>
+          <div class="field">
+            <label>الجنسية <span class="en">Nationality</span></label>
+            <select name="nationality" required>
+              <option value="">اختر...</option>
+              <option value="Uganda">أوغندا / Uganda</option>
+              <option value="Kenya">كينيا / Kenya</option>
+              <option value="Philippines">الفلبين / Philippines</option>
+              <option value="India">الهند / India</option>
+              <option value="Ethiopia">إثيوبيا / Ethiopia</option>
+              <option value="Bangladesh">بنغلاديش / Bangladesh</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>الديانة <span class="en">Religion</span></label>
+            <select name="religion" required>
+              <option value="">اختر...</option>
+              <option value="Muslim">مسلم / Muslim</option>
+              <option value="Christian">مسيحي / Christian</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>الحالة الاجتماعية <span class="en">Marital Status</span></label>
+            <select name="maritalStatus" required>
+              <option value="">اختر...</option>
+              <option value="Single">أعزب / Single</option>
+              <option value="Married">متزوج / Married</option>
+              <option value="Divorced">مطلق / Divorced</option>
+              <option value="Widowed">أرمل / Widowed</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>عدد الأولاد <span class="en">Number of Children</span></label>
+            <input type="number" name="numberOfChildren" min="0" max="15" value="0" />
+          </div>
+          <div class="field full">
+            <label>مكان الإقامة الحالي <span class="en">Current Residence</span></label>
+            <input type="text" name="currentResidence" placeholder="e.g. Kampala, Uganda" dir="ltr" />
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 2: Job Info -->
+      <section class="form-step" data-step="2">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div>
+            <h2 class="step-title">معلومات العمل</h2>
+            <p class="step-subtitle">Job Information</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>المهنة <span class="en">Profession</span></label>
+            <select name="profession" required>
+              <option value="">اختر...</option>
+              <option value="Domestic Worker">عاملة منزلية / Domestic Worker</option>
+              <option value="Private Driver">سائق خاص / Private Driver</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>الراتب الشهري (ريال) <span class="en">Monthly Salary (SAR)</span></label>
+            <input type="number" name="monthlySalary" min="850" max="2000" placeholder="900" required dir="ltr" />
+            <span class="field-hint">بين 850 و 2000 ريال / Between 850-2000 SAR</span>
+          </div>
+          <div class="field">
+            <label>مدة العقد <span class="en">Contract Period</span></label>
+            <input type="text" name="contractPeriod" value="2 سنة / 2 Years" readonly class="readonly" />
+          </div>
+          <div class="field">
+            <label>رقم الجوال <span class="en">Mobile Number</span></label>
+            <div class="input-group">
+              <span class="input-prefix" id="countryCode">+---</span>
+              <input type="tel" name="mobileNumber" placeholder="7XXXXXXXX" dir="ltr" />
+            </div>
+            <span class="field-hint">بدون صفر في البداية</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 3: Passport -->
+      <section class="form-step" data-step="3">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div>
+            <h2 class="step-title">بيانات جواز السفر</h2>
+            <p class="step-subtitle">Passport Details</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field full">
+            <label>رقم الجواز <span class="en">Passport Number</span></label>
+            <input type="text" name="passportNumber" placeholder="e.g. AB1234567" required dir="ltr" style="text-transform:uppercase;" />
+            <span class="field-hint">يبدأ بحرف، 7-9 خانات / Starts with letter, 7-9 chars (A-Z, 0-9)</span>
+          </div>
+          <div class="field">
+            <label>تاريخ الإصدار <span class="en">Date of Issue</span></label>
+            <input type="date" name="passportIssueDate" required />
+          </div>
+          <div class="field">
+            <label>تاريخ الانتهاء <span class="en">Date of Expiry</span></label>
+            <input type="date" name="passportExpiryDate" required />
+            <span class="field-hint">يجب أن يكون صالحاً لمدة 6 أشهر على الأقل</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 4: Education & Languages -->
+      <section class="form-step" data-step="4">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div>
+            <h2 class="step-title">التعليم واللغات</h2>
+            <p class="step-subtitle">Education & Languages</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field full">
+            <label>المستوى التعليمي <span class="en">Education Level</span></label>
+            <select name="educationLevel" required>
+              <option value="">اختر...</option>
+              <option value="None">لا يوجد / None</option>
+              <option value="Primary">ابتدائي / Primary</option>
+              <option value="Secondary">ثانوي / Secondary</option>
+              <option value="High School">ثانوية عامة / High School</option>
+              <option value="Diploma">دبلوم / Diploma</option>
+              <option value="Bachelor">بكالوريوس / Bachelor</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>مستوى اللغة الإنجليزية <span class="en">English Level</span></label>
+            <select name="englishLevel" required>
+              <option value="">اختر...</option>
+              <option value="Poor">ضعيف / Poor</option>
+              <option value="Fair">مقبول / Fair</option>
+              <option value="Good">جيد / Good</option>
+              <option value="Excellent">ممتاز / Excellent</option>
+              <option value="Fluent">بطلاقة / Fluent</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>مستوى اللغة العربية <span class="en">Arabic Level</span></label>
+            <select name="arabicLevel" required>
+              <option value="">اختر...</option>
+              <option value="Poor">ضعيف / Poor</option>
+              <option value="Fair">مقبول / Fair</option>
+              <option value="Good">جيد / Good</option>
+              <option value="Excellent">ممتاز / Excellent</option>
+              <option value="Fluent">بطلاقة / Fluent</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 5: Experience -->
+      <section class="form-step" data-step="5">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div>
+            <h2 class="step-title">الخبرات العملية</h2>
+            <p class="step-subtitle">Work Experience</p>
+          </div>
+        </div>
+
+        <div id="experienceList">
+          <div class="exp-entry" data-index="0">
+            <div class="form-grid">
+              <div class="field">
+                <label>الدولة <span class="en">Country</span></label>
+                <input type="text" name="expCountry_0" placeholder="e.g. السعودية / Saudi Arabia" />
+              </div>
+              <div class="field">
+                <label>المدة (سنوات) <span class="en">Period (Years)</span></label>
+                <input type="number" name="expPeriod_0" min="0" max="20" placeholder="2" dir="ltr" />
+              </div>
+              <div class="field full">
+                <label>المنصب <span class="en">Position</span></label>
+                <select name="expPosition_0">
+                  <option value="">اختر...</option>
+                  <option value="عاملة منزلية / Housemaid">عاملة منزلية / Housemaid</option>
+                  <option value="مربية أطفال / Nanny">مربية أطفال / Nanny</option>
+                  <option value="طباخة / Cook">طباخة / Cook</option>
+                  <option value="سائق خاص / Driver">سائق خاص / Driver</option>
+                  <option value="أخرى / Other">أخرى / Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-add" id="addExpBtn">+ إضافة خبرة أخرى / Add Experience</button>
+
+        <div class="form-grid" style="margin-top:16px;">
+          <div class="field full">
+            <label>خبرات أخرى <span class="en">Other Experience</span></label>
+            <textarea name="otherExperience" rows="2" placeholder="e.g. Cooking and cleaning for 3 years locally" dir="ltr"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 6: Skills -->
+      <section class="form-step" data-step="6">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <div>
+            <h2 class="step-title">المهارات الأساسية</h2>
+            <p class="step-subtitle">Core Skills</p>
+          </div>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <!-- STEP 7: Physical Info -->
+      <section class="form-step" data-step="7">
+        <div class="step-header">
+          <div class="step-number">7</div>
+          <div>
+            <h2 class="step-title">المعلومات الجسدية</h2>
+            <p class="step-subtitle">Physical Information</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>الطول (سم) <span class="en">Height (cm)</span></label>
+            <input type="number" name="heightCm" min="140" max="200" placeholder="165" required dir="ltr" />
+            <span class="field-hint">الحد الأدنى 150 سم</span>
+          </div>
+          <div class="field">
+            <label>الوزن (كغ) <span class="en">Weight (kg)</span></label>
+            <input type="number" name="weightKg" min="35" max="100" placeholder="58" required dir="ltr" />
+            <span class="field-hint">بين 40 و 80 كغ</span>
+          </div>
+          <div class="field full">
+            <label>اللياقة الطبية <span class="en">Medical Fitness</span></label>
+            <div class="radio-group">
+              <label class="radio-card">
+                <input type="radio" name="medicalFit" value="true" required />
+                <span class="radio-body">
+                  <span class="radio-icon good">✓</span>
+                  <span>لائق طبياً / Fit</span>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="medicalFit" value="false" />
+                <span class="radio-body">
+                  <span class="radio-icon bad">⏳</span>
+                  <span>لم يتم الفحص / Pending</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 8: Photos & Agency -->
+      <section class="form-step" data-step="8">
+        <div class="step-header">
+          <div class="step-number">8</div>
+          <div>
+            <h2 class="step-title">الصور والوكالة</h2>
+            <p class="step-subtitle">Photos & Agency</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field full">
+            <label>اسم الوكالة <span class="en">Agency Name</span></label>
+            <input type="text" name="agencyName" placeholder="e.g. Kampala Global Recruitment" dir="ltr" required />
+          </div>
+        </div>
+
+        <div class="photos-grid">
+          <div class="photo-upload" id="profilePhotoUpload">
+            <input type="file" name="profilePhoto" accept="image/*" id="profilePhotoInput" />
+            <div class="photo-preview" id="profilePhotoPreview">
+              <span class="photo-icon">📷</span>
+              <span class="photo-label">صورة شخصية<br><small>Profile Photo</small></span>
+            </div>
+          </div>
+
+          <div class="photo-upload" id="fullPhotoUpload">
+            <input type="file" name="fullPhoto" accept="image/*" id="fullPhotoInput" />
+            <div class="photo-preview" id="fullPhotoPreview">
+              <span class="photo-icon">🧍</span>
+              <span class="photo-label">صورة كاملة<br><small>Full Body Photo</small></span>
+            </div>
+          </div>
+
+          <div class="photo-upload" id="passportScanUpload">
+            <input type="file" name="passportScan" accept="image/*" id="passportScanInput" />
+            <div class="photo-preview" id="passportScanPreview">
+              <span class="photo-icon">🛂</span>
+              <span class="photo-label">صورة الجواز<br><small>Passport Scan</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <div class="nav-bar">
+    <div class="nav-inner">
+      <button type="button" class="btn btn-back" id="prevBtn" disabled>
+        → السابق <span class="en">Previous</span>
+      </button>
+      <button type="button" class="btn btn-next" id="nextBtn">
+        التالي ← <span class="en">Next</span>
+      </button>
+      <button type="button" class="btn btn-generate" id="generateBtn" style="display:none;">
+        <span class="btn-loader" id="btnLoader" style="display:none;"></span>
+        <span id="btnText">📄 إنشاء السيرة الذاتية / Generate CV</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══ API CONFIG (change this to your Railway URL) ═══ -->
+  <script>
+    // ⚠️ CHANGE THIS to your Railway backend URL after deployment
+    const API_URL = "https://your-backend.up.railway.app";
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>
