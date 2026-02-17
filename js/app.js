@@ -420,11 +420,15 @@ async function generateCV() {
     if (fullInput.files[0]) formData.append("fullPhoto", fullInput.files[0]);
     if (passportInput.files[0]) formData.append("passportScan", passportInput.files[0]);
 
-    // Send to backend
-    const response = await fetch(`${API_URL}/api/generate-cv`, {
-      method: "POST",
-      body: formData,
-    });
+    // Backend URL
+const API_URL = "https://haneen-cv-backend-production.up.railway.app";
+
+// Send to backend
+const response = await fetch(`${API_URL}/api/generate-cv`, {
+  method: "POST",
+  body: formData,
+});
+
 
     if (!response.ok) {
       const err = await response.json().catch(() => ({}));
